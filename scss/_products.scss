@@ -1,0 +1,176 @@
+$colorh1: #B2675E;
+$colorh2: #C4A381;
+$colorh3: #fff;
+$colorp: #000;
+
+$fontlg: 60px;
+$fontmd: 30px;
+$fontsm: 12px;
+
+//* HEADER */
+.header-products {
+  padding: 0;
+
+  .products-headertekst {
+    padding: 5%;
+
+    h1 {
+      font-size: $fontmd;
+      color: $colorh1;
+      font-family: 'Playfair Display', sans-serif;
+    }
+
+    p {
+      margin-top: 3%;
+    }
+  }
+
+  .products-boekenrek {
+    height: 100%;
+    text-align: right;
+  }
+}
+
+//* MAIN */
+.main-products {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+
+  .filter {
+    width: 12%;
+    .category {
+      border: solid 2px grey;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: center;
+      margin: 5%;
+      padding: 10%;
+      form {
+        display: flex;
+        flex-direction: column;
+        [type="checkbox"] {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  .page {
+    width: 80%;
+
+    .book {
+      display: flex;
+      padding: 2% 0;
+      border-bottom: solid 2px #a8a8a8;
+
+      div {
+        margin-right: 5%;
+      }
+
+      .afb {
+        width: 15%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .inhoud {
+        width: 35%;
+
+        p {
+          margin-top: 3%;
+        }
+      }
+
+      .prijs {
+        a {
+          button {
+            margin-top: 60%;
+            padding: 30% 80%;
+            border-radius: 1rem;
+            background-color: $colorh1;
+            color: $colorh3;
+            font-weight: bold;
+            font-size: large;
+            border: 3px solid $colorh1;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $colorh3;
+              color: $colorh1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    a {
+      color: black;
+      padding: 8px 16px;
+      text-decoration: none;
+      &:hover{
+        color: $colorh1;
+      }
+    }
+    .active{
+      background-color: $colorh1;
+      color: $colorh3;
+      border-radius: 10%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .main-products {
+    display: inline-block;
+    .filter{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      .category{
+        width: 50%;
+        padding: 5%;
+      }
+    }
+    .page {
+      width: 100%;
+      .book {
+        display: inline-block;
+        padding: 8%;
+        .afb {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin: 8% 0;
+          img {
+            width: 50%;
+          }
+        }
+        .inhoud {
+          width: 100%;
+          margin-bottom: 5%;
+        }
+        .prijs{
+          width: 100%;
+          a{
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            button{
+              padding: 5% 20%;
+              margin: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

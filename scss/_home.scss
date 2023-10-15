@@ -1,0 +1,314 @@
+$colorh1: #B2675E;
+$colorh2: #C4A381;
+$colorh3: #fff;
+$colorp: #000;
+
+$fontlg: 60px;
+$fontmd: 30px;
+$fontsm: 12px;
+
+//* NAVIGATION */
+li {
+  list-style: none;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.head {
+  border-bottom: 1px solid #E2E8F0;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+
+    .nav-logo {
+      img {
+        width: 2rem;
+      }
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-item {
+        margin-left: 5rem;
+
+        .nav-link {
+          font-size: 1.6rem;
+          font-weight: 400;
+          color: #475569;
+
+          &:hover {
+            color: $colorh2;
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #101010;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .head {
+    .navbar {
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+
+      }
+
+      .nav-menu.active {
+        left: 0;
+
+        .nav-item {
+          margin: 2.5rem 0;
+        }
+      }
+
+      .hamburger {
+        display: block;
+        cursor: pointer;
+
+      }
+
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+
+}
+
+
+//* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 6% 6% 0 6%;
+  background-color: #F3EDE6;
+
+  .header-text {
+    margin-top: 2%;
+
+    h1 {
+      font-size: $fontlg;
+      color: $colorh1;
+      font-family: 'Playfair Display', sans-serif;
+    }
+
+    p {
+      font-size: $fontmd;
+      margin-top: 7%;
+    }
+
+    a {
+      button{
+        text-decoration: none;
+        margin-top: 40%;
+        padding: 4% 6%;
+        border-radius: 1rem;
+        background-color: $colorh1;
+        color: $colorh3;
+        font-weight: bold;
+        font-size: large;
+        border: 3px solid $colorh1;
+        cursor: pointer;
+        &:hover{
+          background-color: $colorh3;
+          color: $colorh1;
+        }
+      }
+    }
+  }
+  img {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: inline-block;
+    text-align: center;
+
+    .header-text {
+      text-align: left;
+      margin-top: 10%;
+      p {
+        margin-top: 3%;
+      }
+
+      button {
+        margin-top: 5%;
+      }
+    }
+
+    img {
+      margin-top: 10%;
+      width: 100%;
+    }
+  }
+}
+
+//* MAIN */
+main{
+  .main-div-1{
+    display: flex;
+    justify-content: space-between;
+    padding: 6%;
+    div{
+      h2{
+        font-size: $fontmd;
+        font-family: "Playfair Display", sans-serif;
+        color: $colorh1;
+      }
+      .div-p{
+        p{
+          margin-top: 4%;
+          margin-right: 30%;
+        }
+      }
+    }
+    img{
+      width: 30%;
+    }
+  }
+  .main-div-2{
+    padding: 6%;
+    background-color: #F3EDE6;
+    width: 100%;
+    h2{
+      font-family: "Playfair Display", sans-serif;
+      color: $colorh1;
+      font-size: $fontmd;
+    }
+    .div2-boeken {
+      padding-top: 3%;
+      display: flex;
+      width: 100%;
+      div{
+        background-color: $colorh3;
+        margin: 3%;
+        padding: 3%;
+        border-radius: 2rem;
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .boek-info{
+          margin-top: 7%;
+          font-size: $fontmd;
+          font-weight: bold;
+        }
+        p{
+          font-size: large;
+          text-align: center;
+          font-weight: bold;
+        }
+        img{
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    .main-div-1 {
+      display: inline-block;
+      margin-top: 10%;
+      text-align: center;
+      div{
+        text-align: left;
+        .div-p{
+          p{
+            margin-right: 0;
+          }
+        }
+      }
+      img{
+        margin-top: 15%;
+        width: 70%;
+      }
+    }
+    .main-div-2 {
+      .div2-boeken {
+        flex-direction: column;
+        align-items: center;
+        div{
+          width: 70%;
+          img{
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//* FOOTER */
+footer{
+  background-color: #644536;
+  color: $colorh3;
+  padding: 1% 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: $fontsm;
+  .f1{
+    h3{
+      margin-bottom: 3%;
+    }
+    p{
+      margin-left: 5%;
+      padding: 2%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer{
+    padding: 3%;
+    flex-direction: column;
+    div{
+      padding-bottom: 3%;
+    }
+  }
+}

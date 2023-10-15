@@ -2,62 +2,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Werkpakket 1 Karo Voets</title>
+    <title>Werkpakket 1 Karo Voets Home</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <script defer src="navbar.js"></script>
 </head>
 <body>
-<nav>
-    <a href="index.html"><img src="" alt="logo"></a>
-    <ul>
-        <li>Home</li>
-        <li>Products</li>
-        <li>Profile</li>
-    </ul>
-    <div>Winkelmandje</div>
+<nav class="head">
+    <div class="navbar">
+        <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Logo"></a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="products.html" class="nav-link">Products</a>
+            </li>
+            <li class="nav-item">
+                <a href="profile.html" class="nav-link">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Cart</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
 </nav>
 
 <header>
-    <div>
+    <div class="header-text">
         <h1>Booktopia</h1>
-        <p>Slogan hbsjfvhjfviofjfio huiuifvuifv iosvuiv</p>
-        <button>Shop here</button>
+        <p>Where every page is a new adventure.</p>
+        <a href="products.html"><button>Shop here</button></a>
     </div>
 
-    <div><img src="assets/BoekenHome.png" alt="Boekenhand"></div>
+    <img src="assets/BoekenHome.png" alt="Boekenhand">
 </header>
 
 <main>
-    <div>
+    <div class="main-div-1">
         <div>
             <h2>Who are we?</h2>
-            <p>Omschrijving Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nostrum ratione veritatis.
-                Dolorum in iste maxime natus sapiente. Asperiores eius labore necessitatibus quas quisquam ratione
-                sapiente sit unde ut vel.</p>
-            <p>Omschrijving Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nostrum ratione veritatis.
-                Dolorum in iste maxime natus sapiente. Asperiores eius labore necessitatibus quas quisquam ratione
-                sapiente sit unde ut vel.</p>
+            <div class="div-p">
+                <p>
+                    Welcome to Booktopia, your literary haven in the heart of Hasselt. We are more than just a
+                    store; we are a sanctuary for book lovers, a gateway to countless worlds, and a place where stories
+                    come to life.</p>
+                <p>So, whether you're sipping a cup of coffee at home, waiting for your next meeting,
+                    or traveling to far-off destinations, your literary companions are just a few clicks away. Booktopia
+                    invites you to embark on a literary journey that knows no bounds. Immerse yourself
+                    in the stories, knowledge, and inspiration that our virtual bookstore has to offer. Start exploring
+                    the world of words with us today.</p>
+            </div>
         </div>
-        <div><img src="" alt="BoekenHome2"></div>
+        <img src="assets/BoekHome2.jpg" alt="BoekenHome2">
     </div>
 
-    <div>
+    <div class="main-div-2">
         <h2>In the spotlight</h2>
-        <div>
-            <img src="" alt="">
-            <p>Fourth Wing</p>
-            <p>Rebecca Yarros</p>
-        </div>
-        <div>
-            <img src="" alt="">
-            <p>Book Lovers</p>
-            <p>Emily Henry</p>
-        </div>
-        <div>
-            <img src="" alt="">
-            <p>Better than the movies</p>
-            <p>Lynn Painter</p>
+        <div class="div2-boeken">
+            <div>
+                <img src="assets/fourth-wing-1.jpg" alt="Fourth Wing">
+                <p class="boek-info">Fourth Wing</p>
+                <p>Rebecca Yarros</p>
+            </div>
+            <div>
+                <img src="assets/book-lovers-7.jpg" alt="Book Lovers">
+                <p class="boek-info">Book Lovers</p>
+                <p>Emily Henry</p>
+            </div>
+            <div>
+                <img src="assets/better-than-the-movies.jpg" alt="Better than the movies">
+                <p class="boek-info">Better than the movies</p>
+                <p>Lynn Painter</p>
+            </div>
         </div>
     </div>
 </main>
+
+<footer>
+    <div class="f1">
+        <h3>Contact</h3>
+        <p>karo.voets@student.pxl.be</p>
+        <p>+32 415 57 25 26</p>
+    </div>
+    <div class="f2">
+        <p>Elfde-Liniestraat 24</p>
+        <p>3500 Hasselt</p>
+    </div>
+    <div class="f3">
+        <img src="" alt="instagram">
+        <img src="" alt="facebook">
+    </div>
+</footer>
 </body>
 </html>

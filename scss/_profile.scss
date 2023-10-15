@@ -1,0 +1,93 @@
+$colorh1: #B2675E;
+$colorh2: #C4A381;
+$colorh3: #fff;
+$colorp: #000;
+
+$fontlg: 60px;
+$fontmd: 30px;
+$fontsm: 12px;
+
+.main-profile{
+  background-color: #F3EDE6;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  .form {
+    width: 80%;
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    border-radius: 3rem;
+    .login{
+      padding: 5%;
+      width: 50%;
+      h1{
+        color: $colorh1;
+        font-family: 'Playfair Display', sans-serif;
+        margin-bottom: 15%;
+      }
+      form{
+        label{
+          font-size: 20px;
+        }
+        input{
+          width: 100%;
+          padding: 2%;
+          margin-bottom: 8%;
+        }
+        .forgot{
+          text-decoration: underline;
+          display: flex;
+          justify-content: right;
+          color: $colorh1;
+          font-size: 17px;
+        }
+        .parent-submit-btn{
+          display: flex;
+          justify-content: center;
+          margin-top: 15%;
+          button{
+            padding: 2% 10%;
+            border-radius: 1rem;
+            background-color: $colorh1;
+            color: $colorh3;
+            font-weight: bold;
+            font-size: large;
+            border: 3px solid $colorh1;
+            cursor: pointer;
+            &:hover {
+              background-color: $colorh3;
+              color: $colorh1;
+            }
+          }
+        }
+      }
+    }
+    .profile-img {
+      width: 50%;
+      img {
+        width: 100%;
+        border-radius: 0 3rem 3rem 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-profile{
+    .form{
+      display: inline-block;
+      margin: 15% 0;
+      .login{
+        width: 100%;
+        padding: 10%;
+      }
+      .profile-img{
+        width: 100%;
+        img {
+          border-radius: 0 0 3rem 3rem;
+        }
+      }
+    }
+  }
+}
